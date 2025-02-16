@@ -1,0 +1,197 @@
+/* =======================
+   GLOBAL & RESET STYLES
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth; /* basic smooth scrolling in modern browsers */
+}
+
+/* Light Theme Colors */
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --accent-color: #ff6f61;
+  --navbar-bg: #333;
+  --navbar-text: #fff;
+  --card-bg: #fff;
+}
+
+/* Dark Theme Colors */
+body.dark-mode {
+  --bg-color: #222;
+  --text-color: #fff;
+  --navbar-bg: #000;
+  --navbar-text: #fff;
+  --card-bg: #333;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* =======================
+   NAVIGATION
+======================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+  padding: 1em;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.navbar ul li a {
+  color: var(--navbar-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#theme-toggle {
+  background-color: var(--accent-color);
+  border: none;
+  color: #fff;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* =======================
+   HERO SECTION
+======================= */
+#hero {
+  position: relative;
+  height: 80vh;
+  background: url("../images/hero-bg..webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  padding: 2em;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.75em 1.5em;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: #e65c4f;
+}
+
+/* =======================
+   SECTIONS
+======================= */
+section {
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+}
+
+.about-illustration {
+  max-width: 300px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+/* =======================
+   PARALLAX SECTION
+======================= */
+.parallax {
+  height: 50vh;
+  background: url("../images/parallax-bg.webp") center/cover no-repeat fixed;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* =======================
+   PROJECTS
+======================= */
+.projects-grid {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: 1fr;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+}
+
+.project-info {
+  padding: 1em;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive for larger screens */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+}
